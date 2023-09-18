@@ -32,8 +32,8 @@ body{
 
 /* Stile dei quadrati all'interno del container */
 .square{
-    width: 10%;
-    padding-top: 10%;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
     justify-content: center;
     align-items: center;
     font-size: 25px;
@@ -41,4 +41,8 @@ body{
     aspect-ratio: 1 / 1;
     border: 1px solid white;
     cursor: pointer;
+}
+
+.square.clicked{
+    background-color: cadetblue;
 }
