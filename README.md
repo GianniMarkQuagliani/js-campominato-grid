@@ -15,4 +15,8 @@
 
 # Bonus
 - Inizio con il creare una select in HTML
-- Creo un event listener selezi
+- Seleziono la select e il pulsante "Genera"
+- Aggiungo un event listener al pulsante "Genera"
+- Faccio il reset della griglia all'avvio
+- Imposto la dimensione della griglia in base alla difficoltà
+- Genero la griglia in base alla dimensione calcolata

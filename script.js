@@ -51,3 +51,46 @@ function createSquare(index) {
     // Restituisco l'elemento quadrato appena creato
     return newSquare;
 }
+
+//BONUS
+// Seleziono la select e il pulsante "Genera"
+const difficultySelect = document.getElementById("difficulty");
+const generateButton = document.getElementById("generate");
+
+// Aggiungo un event listener al pulsante "Genera"
+generateButton.addEventListener("click", generateGrid);
+
+// faccio il reset della griglia all'avvio
+generateGrid();
+
+function generateGrid() {
+    // Ottengo il livello di difficoltà selezionato dalla select
+    const selectedDifficulty = parseInt(difficultySelect.value);
+    let gridSize;
+
+    // Imposto la dimensione della griglia in base alla difficoltà
+    if (selectedDifficulty === 1) {
+        // Difficoltà 1: 100 caselle (10x10)
+        gridSize = 10;
+    } else if (selectedDifficulty === 2) {
+        // Difficoltà 2: 81 caselle (9x9)
+        gridSize = 9;
+    } else if (selectedDifficulty === 3) {
+        // Difficoltà 3: 49 caselle (7x7)
+        gridSize = 7;
+    }
+
+    // Resetto la griglia prima di generarla nuovamente
+    reset();
+
+    // Genera la griglia in base alla dimensione calcolata
+    for (let i = 1; i <= gridSize * gridSize; i++) { 
+        const square = createSquare(i);
+        square.addEventListener('click', function () {
+            this.classList.toggle('clicked');
+            console.log(this.className);
+            console.log(this.innerText);
+        });
+        container.append(square);
+    }
+}
