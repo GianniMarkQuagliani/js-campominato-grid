@@ -7,3 +7,8 @@
 - Faccio un reset
 - Creo un ciclo da 1 a 100.
 - Ad ogni iterazione del ciclo, genero un quadrato utilizzando una funzione.
+
+- Creo un nuovo elemento quadrato
+- Assegno la classe 'square' all'elemento quadrato
+- Inserisco il numero dell'indice all'interno dell'elemento quadrato
+- Restituisco l'elemento quadrato appena creato

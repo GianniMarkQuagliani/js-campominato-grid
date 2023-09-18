@@ -3,6 +3,7 @@ const container = document.querySelector('.container');
 
 // Faccio un reset
 reset();
+init();
 function reset () {
     container.innerHTML = '' ;
 }
@@ -21,6 +22,7 @@ function init() {
             
             // Aggiungo o rimuovo la classe 'clicked' per cambiare il suo stile
             this.classList.toggle('clicked');
+            console.log(this.className);
             
             // Stampo il testo contenuto nell'elemento (numero del quadrato) nella console
             console.log(this.innerText);
@@ -30,4 +32,22 @@ function init() {
         container.append(square);
 
     }
+}
+
+
+   
+function createSquare(index) {
+    // Creo un nuovo elemento quadrato
+    const newSquare = document.createElement('div');
+
+    // Assegno la classe 'square' all'elemento quadrato
+    newSquare.className = 'square';
+    console.log(newSquare.className);
+
+    // Inserisco il numero dell'indice all'interno dell'elemento quadrato
+    newSquare.innerHTML = `<span>${index}</span>`;
+    console.log(newSquare.innerHTML);
+
+    // Restituisco l'elemento quadrato appena creato
+    return newSquare;
 }

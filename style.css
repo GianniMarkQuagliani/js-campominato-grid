@@ -43,6 +43,17 @@ body{
     cursor: pointer;
 }
 
+/* Quando una cella è cliccata e ha la classe 'clicked', cambia lo stile */
 .square.clicked{
     background-color: cadetblue;
+}
+
+/* Nasconde il testo all'interno delle celle  */
+.square span{
+    display: none;
+}
+
+/* Quando una cella è cliccata e ha la classe 'clicked', mostra il testo */
+.square.clicked span{
+    display: block;
 }
