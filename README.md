@@ -12,3 +12,7 @@
 - Assegno la classe 'square' all'elemento quadrato
 - Inserisco il numero dell'indice all'interno dell'elemento quadrato
 - Restituisco l'elemento quadrato appena creato
+
+# Bonus
+- Inizio con il creare una select in HTML
+- Creo un event listener selezi
