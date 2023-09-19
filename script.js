@@ -34,8 +34,8 @@ function init() {
     }
 }
 
-
    
+
 function createSquare(index) {
     // Creo un nuovo elemento quadrato
     const newSquare = document.createElement('div');
@@ -83,9 +83,16 @@ function generateGrid() {
     // Resetto la griglia prima di generarla nuovamente
     reset();
 
+    // Calcolo la larghezza dei quadrati in base alla dimensione della griglia
+    const squareSize = 100 / gridSize;
+
     // Genera la griglia in base alla dimensione calcolata
     for (let i = 1; i <= gridSize * gridSize; i++) { 
         const square = createSquare(i);
+
+        // Imposto la larghezza dei quadrati
+        square.style.width = `${squareSize}%`;
+
         square.addEventListener('click', function () {
             this.classList.toggle('clicked');
             console.log(this.className);
